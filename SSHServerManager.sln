@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSHServerManager.Connection", "SSHServerManager.Connection\SSHServerManager.Connection.csproj", "{9BA56923-F727-4A5C-AD10-D97B0B5105F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSHServerManager.Application", "SSHServerManager.Application\SSHServerManager.Application.csproj", "{A8051EB3-1E7A-44D4-946F-B2B908DE4155}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSHServerManager.Apresentation", "SSHServerManager.Apresentation\SSHServerManager.Apresentation.csproj", "{AF928217-73D1-4DBB-86DD-E524E1D945C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BA56923-F727-4A5C-AD10-D97B0B5105F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BA56923-F727-4A5C-AD10-D97B0B5105F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BA56923-F727-4A5C-AD10-D97B0B5105F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BA56923-F727-4A5C-AD10-D97B0B5105F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8051EB3-1E7A-44D4-946F-B2B908DE4155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8051EB3-1E7A-44D4-946F-B2B908DE4155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8051EB3-1E7A-44D4-946F-B2B908DE4155}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8051EB3-1E7A-44D4-946F-B2B908DE4155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF928217-73D1-4DBB-86DD-E524E1D945C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF928217-73D1-4DBB-86DD-E524E1D945C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF928217-73D1-4DBB-86DD-E524E1D945C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF928217-73D1-4DBB-86DD-E524E1D945C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D98455E-5DDB-48B7-9389-B28352FE5D5A}
+	EndGlobalSection
+EndGlobal

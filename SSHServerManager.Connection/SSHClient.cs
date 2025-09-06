@@ -99,12 +99,17 @@ namespace SSHServerManager.Connection
         public string Nodes() => Run("df -i");
         public string DiskPartitions() => Run("lsblk -f");
         public string Processes() => Run("htop");
-        public string FailedServices() => Run("systemctl --failed");
-        public string ActiveServices() => 
-            Run("systemctl list-units --type=service --state=active");
         public string WarningsErrorsLogs() => Run("journalctl -p warning -b");
 
         // Services status and logs
+        public string RunningServices() =>
+            Run("systemctl list-units --type=service --state=running");
+        public string ActiveServices() =>
+            Run("systemctl --type=service --state=active");
+        public string FailedServices() =>
+            Run("systemctl --failed --type=service");
+        public string ExecutingWithSystem()
+            => Run("systemctl list-unit-files --type=service");
         public string ServiceStatus(string serviceName) => Run($"systemctl status {serviceName}");
         public string ServiceLogs(string serviceName, int lines = 100) => 
             Run($"journalctl -u {serviceName} -n {lines} --no-pager");

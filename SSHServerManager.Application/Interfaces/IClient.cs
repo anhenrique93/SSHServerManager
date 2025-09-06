@@ -22,11 +22,13 @@
         public string Nodes();
         public string DiskPartitions();
         public string Processes();
-        public string FailedServices();
-        public string ActiveServices();
         public string WarningsErrorsLogs();
 
         // Services status and logs
+        public string RunningServices();
+        public string ActiveServices();
+        public string FailedServices();
+        public string ExecutingWithSystem();
         public string ServiceStatus(string serviceName);
         public string ServiceLogs(string serviceName, int lines = 100);
 

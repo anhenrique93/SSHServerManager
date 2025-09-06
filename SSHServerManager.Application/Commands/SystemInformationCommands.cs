@@ -42,16 +42,6 @@ namespace SSHServerManager.Application.Commands
         public string Execute() => Client.Processes();
     }
 
-    public record FailedServices(IClient Client) : ICommand
-    {
-        public string Execute() => Client.FailedServices();
-    }
-
-    public record ActiveServices(IClient Client) : ICommand
-    {
-        public string Execute() => Client.ActiveServices();
-    }
-
     public record WarningsErrorsLogs(IClient Client) : ICommand
     {
         public string Execute() => Client.WarningsErrorsLogs();

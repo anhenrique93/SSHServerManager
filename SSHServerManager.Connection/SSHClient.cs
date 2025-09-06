@@ -84,8 +84,10 @@ namespace SSHServerManager.Connection
 
         // System
         public string WhoAmI() => Run("whoami");
-        public string UpdatePackagesList() => Run("sudo apt update 2>&1", timeoutSeconds: 180);
-        public string UpgradePackages() => Run("sudo apt upgrade -y 2>&1", timeoutSeconds: 180);
+        public string UpdatePackagesList() => 
+            Run("sudo apt update 2>&1", timeoutSeconds: 180);
+        public string UpgradePackages() => 
+            Run("sudo apt upgrade -y 2>&1", timeoutSeconds: 180);
         public string Reboot() => Run("sudo reboot, timeoutSeconds: 180");
 
         // System information and health
@@ -98,16 +100,20 @@ namespace SSHServerManager.Connection
         public string DiskPartitions() => Run("lsblk -f");
         public string Processes() => Run("htop");
         public string FailedServices() => Run("systemctl --failed");
-        public string ActiveServices() => Run("systemctl list-units --type=service --state=active");
+        public string ActiveServices() => 
+            Run("systemctl list-units --type=service --state=active");
         public string WarningsErrorsLogs() => Run("journalctl -p warning -b");
 
         // Services status and logs
         public string ServiceStatus(string serviceName) => Run($"systemctl status {serviceName}");
-        public string ServiceLogs(string serviceName, int lines = 100) => Run($"journalctl -u {serviceName} -n {lines} --no-pager");
+        public string ServiceLogs(string serviceName, int lines = 100) => 
+            Run($"journalctl -u {serviceName} -n {lines} --no-pager");
 
         // Disks health
-        public string SmartStatus(string disk) => Run($"sudo smartctl -H {disk}", timeoutSeconds: 180);
-        public string SmartInfo(string disk) => Run($"sudo smartctl -i {disk}", timeoutSeconds: 180);
+        public string SmartStatus(string disk) => 
+            Run($"sudo smartctl -H {disk}", timeoutSeconds: 180);
+        public string SmartInfo(string disk) => 
+            Run($"sudo smartctl -i {disk}", timeoutSeconds: 180);
 
         // Network health
         public string InterfaceIps() => Run("ip -brief address ");
@@ -122,7 +128,8 @@ namespace SSHServerManager.Connection
         public string EstablishedConnections() => Run("ss -s");
         public string AllConnections() => Run("ss -tunap");
         public string FirewallStatus() => Run("sudo ufw status verbose", timeoutSeconds: 180);
-        public string FirewallLogs(int lines = 100) => Run($"sudo tail -n {lines} /var/log/ufw.log", timeoutSeconds: 180);
+        public string FirewallLogs(int lines = 100) => 
+            Run($"sudo tail -n {lines} /var/log/ufw.log", timeoutSeconds: 180);
         public string ICMP() => Run("ping -c 4 1.1.1.1 ");
         public string DNSResolution(string domain = "google.com") => Run($"ping {domain}");
         public string Traceroute(string domain = "google.com") => Run($"traceroute {domain}");

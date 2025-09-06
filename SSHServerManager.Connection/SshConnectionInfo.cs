@@ -1,6 +1,6 @@
 ﻿using Renci.SshNet;
 
-namespace ConnectionManager
+namespace SSHServerManager.Connection
 {
     public static class SshConnectionInfo
     {

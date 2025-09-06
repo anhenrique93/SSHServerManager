@@ -1,6 +1,6 @@
 ﻿using SSHServerManager.Application.Interfaces;
 
-namespace ConnectionManager.Commands
+namespace SSHServerManager.Application.Commands
 {
     public record WhoAmI(IClient Client) : ICommand
     {

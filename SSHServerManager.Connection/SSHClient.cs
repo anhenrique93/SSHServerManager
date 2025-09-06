@@ -1,7 +1,7 @@
 ﻿using Renci.SshNet;
 using SSHServerManager.Application.Interfaces;
 
-namespace ConnectionManager
+namespace SSHServerManager.Connection
 {
     public class SSHClient : IClient, IDisposable
     {
@@ -88,7 +88,7 @@ namespace ConnectionManager
         public string UpgradePackages() => Run("sudo apt upgrade -y 2>&1", timeoutSeconds: 180);
         public string Reboot() => Run("sudo reboot, timeoutSeconds: 180");
 
-        // System state
+        // System information and health
         public string HostName() => Run("hostnamectl");
         public string Uptime() => Run("uptime");
         public string LastBoot() => Run("who -b");

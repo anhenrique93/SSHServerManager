@@ -22,19 +22,9 @@ namespace SSHServerManager.Application.Commands
         public string Execute() => Client.MemoryInfo();
     }
 
-    public record DiskUsage(IClient Client) : ICommand
-    {
-        public string Execute() => Client.DiskUsage();
-    }
-
     public record Nodes(IClient Client) : ICommand
     {
         public string Execute() => Client.Nodes();
-    }
-
-    public record DiskPartitions(IClient Client) : ICommand
-    {
-        public string Execute() => Client.DiskPartitions();
     }
 
     public record Processes(IClient Client) : ICommand

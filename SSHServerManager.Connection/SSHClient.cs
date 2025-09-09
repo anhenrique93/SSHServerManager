@@ -64,7 +64,7 @@ namespace SSHServerManager.Connection
             if (trimmed.StartsWith("sudo ", StringComparison.Ordinal))
             {
                 if (string.IsNullOrEmpty(_sudoPassword))
-                    throw new InvalidOperationException("Este comando requer sudo, mas não foi fornecida sudoPassword.");
+                    throw new InvalidOperationException("This is a sudo command and a password is required.");
 
                 var inner = trimmed.Substring("sudo ".Length);
 

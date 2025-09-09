@@ -11,4 +11,14 @@ namespace SSHServerManager.Application.Commands
     {
         public string Execute() => Client.SmartInfo(disk);
     }
+
+    public record DiskPartitions(IClient Client) : ICommand
+    {
+        public string Execute() => Client.DiskPartitions();
+    }
+
+    public record DiskUsage(IClient Client) : ICommand
+    {
+        public string Execute() => Client.DiskUsage();
+    }
 }

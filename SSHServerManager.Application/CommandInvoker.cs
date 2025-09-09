@@ -15,7 +15,7 @@ namespace ConnectionManager
             }
             catch (Exception ex)
             {
-                throw new InvalidOperationException($"Error executing command: {ex.Message}");
+                Console.WriteLine($"Error executing command: {ex.Message}");
             }
         }
 
